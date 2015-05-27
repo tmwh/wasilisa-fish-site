@@ -1,0 +1,30 @@
+---
+scripts:
+ - vendor.min
+ - main
+---
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>
+    {% if page.title %}
+      {{ page.title }}
+    {% else %}
+      Wasilisa Fish Homepage
+    {% endif %}
+  </title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="/assets/stylesheets/main.css">
+</head>
+<body class="{{ page.body_class }}">
+{{ content }}
+{% for script in page.scripts %}
+<script src="/assets/javascripts/{{script}}.js" type="application/javascript"></script>
+{% endfor %}
+{% for script in page.additional_scripts %}
+<script src="/assets/javascripts/{{script}}.js" type="application/javascript"></script>
+{% endfor %}
+</body>
+</html>

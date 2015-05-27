@@ -1,0 +1,19 @@
+# Site settings
+title: Wasilisa Fish Homepage
+email:
+description: >
+  This if my cool homepage.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://wasilisafish.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .sass/
+  - bower_components/
+
+# Build settings
+markdown: kramdown
+sass:
+    sass_dir: assets/stylesheets

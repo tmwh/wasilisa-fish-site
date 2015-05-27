@@ -1,0 +1,43 @@
+#projects-wrapper
+  width: 100%
+  height: 100%
+  overflow: hidden
+  box-sizing: border-box
+  position: relative
+  padding-right: 3em
+
+#projects
+  list-style: none
+  padding: 0
+  margin: 0
+  width: 100%
+  position: relative
+  top: 15vw
+  transition: top 0.3s
+  left: 0
+
+  .project
+    width: 30vw
+    height: 30vw
+    position: relative
+    left: 20%
+    margin-bottom: 2em
+    a
+      width: 100%
+      height: 100%
+      display: block
+      img
+        position: relative
+        display: block
+        height: 80%
+        top: 10%
+        margin: 0 auto
+
+    &.yellow
+      background: #ffb400
+
+    &.orange
+      background: #ff7554
+
+    &.blue
+      background: #0eb1cf

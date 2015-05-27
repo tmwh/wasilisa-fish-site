@@ -1,0 +1,28 @@
+---
+layout: main
+---
+{% if page.full %}
+  {% assign picture_wrapper_class = 'full' %}
+  {% assign content_wrapper_class = 'hidden' %}
+{% else %}
+  {% assign menu_button_class = 'close' %}
+{% endif %}
+<div id="picture-wrapper" class="{{ picture_wrapper_class }}">
+  {% if page.picture %}
+    {% include {{ page.picture }}.html %}
+  {% else %}
+    {% include pick-my-brain.html %}
+  {% endif %}
+  {% if page.back_path %}
+    <a id="back-button" href="{{ page.back_path }}" title="Back">
+      ←
+    </a>
+  {% endif %}
+  <a id="menu-button" class="{{ menu_button_class }}" href="javascript:void(0)" title="Menu">
+    <img id="menu-open-image" src="/assets/images/menu-open-button.png" />
+    <img id="menu-close-image" src="/assets/images/menu-close-button.png" />
+  </a>
+</div>
+<div id="content-wrapper" class="{{ content_wrapper_class }}">
+  {{ content }}
+</div>

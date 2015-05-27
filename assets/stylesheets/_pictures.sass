@@ -1,0 +1,94 @@
+.hidden
+  width: 0 !important
+  padding: 0 !important
+  margin: 0 !important
+  opacity: 0 !important
+
+.full
+  width: 100% !important
+
+.layer
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  position: absolute
+  list-style: none
+
+#menu-button, #back-button
+  position: absolute
+  z-index: 999
+  width: 2em
+  height: 2em
+  line-height: 2em
+  font-size: 2.5em
+  text-align: center
+  vertical-align: middle
+  text-decoration: none
+  color: #fff
+
+#menu-button
+  border-radius: 50%
+  bottom: 3em
+  right: -1em
+  transition: right 0.5s
+  background: #e96da4
+  #menu-open-image
+    display: none
+  #menu-close-image
+    display: block
+
+  img
+    width: 50%
+    display: block
+    margin: auto
+    position: relative
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+
+#back-button
+  opacity: 0.3
+  left: 1em
+  top: 1em
+  background: rgba(255, 233, 251, 0.6)
+  &:hover
+    opacity: 1
+
+.full
+  #menu-button
+    #menu-open-image
+      display: block
+    #menu-close-image
+      display: none
+
+  &:hover
+    #menu-button
+      right: 1em
+
+#picture-wrapper
+  width: 50%
+  position: relative
+  height: 100%
+  float: left
+  display: block
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  padding: 1em 0em 1em 1em
+  transition: all 0.3s, display 0s 0.3s
+  &.full
+    padding: 1em
+  img
+    pointer-events: none
+    user-select: none
+    -moz-user-select: none
+    -webkit-user-select: none
+    -webkit-user-drag: none
+
+#content-wrapper
+  @extend #picture-wrapper
+  padding: 1em 1em 1em 0em
+
+@import 'pick_my_brain'
